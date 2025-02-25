@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalog</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="books.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between mb-3">
+            <div class="d-flex w-75 gap-2">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search for a book..." onkeyup="searchBooks()">
+                <select id="sortSelect" class="form-select w-25" onchange="sortBooks()">
+                    <option value="title">Sort by Title</option>
+                    <option value="author">Sort by Author</option>
+                    <option value="category">Sort by Category</option>
+                    <option value="type">Sort by Type</option>
+                    <option value="shelf">Sort by Shelf</option>
+                    <option value="year">Sort by Year</option>
+                    <option value="status">Sort by Status</option>
+                </select>
+            </div>
+            <button class="btn btn-danger" onclick="logout()">Logout</button>
+        </div>
+        <div class="row" id="bookContainer"></div>
+    </div>
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="bookImage" src="" class="img-fluid" alt="Book Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="books.js" defer></script>
+</body>
+</html>
