@@ -29,18 +29,26 @@
 
     <!-- Bootstrap Modal -->
     <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- Larger modal -->
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="bookTitle"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body text-center">
-                    <img id="bookImage" src="" class="img-fluid" alt="Book Image">
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <img id="bookImage" src="" class="img-fluid me-3" alt="Book Image" 
+                            style="width: 300px; height: auto; border-radius: 10px;"> <!-- Larger image -->
+                        <div class="flex-grow-1">
+                            <p id="bookSummary" class="text-start" 
+                            style="max-height: 300px; overflow-y: auto; font-size: 1.1rem;"></p> <!-- Styled summary -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <script src="bootstrap.bundle.min.js"></script>
     <script src="books.js" defer></script>
